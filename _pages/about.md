@@ -26,11 +26,15 @@ My research focuses on **natural language processing and machine learning**. Mor
 - **Research Intern**, Tencent WXG (June 2024 – September 2024); advised by **Zifei Shan**
 - **Research Intern**, Shanghai AI Lab (June 2023 – December 2023); advised by **Prof. Yu Cheng**
 
-## Selected Publications
+## Publications
 
-{% include publications.html %}
+{% include base_path %}
 
-**Awards:** Received the **Zhiyuan Honor Scholarship** at Shanghai Jiao Tong University.
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
+**Honors and Awards:** Received the **Zhiyuan Honor Scholarship** at Shanghai Jiao Tong University.
 
 ## Contact
 - **Email:** [jliugi@connect.ust.hk](mailto:jliugi@connect.ust.hk)

@@ -13,25 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Junteng Liu
-email: jliugi@connect.ust.hk
-description: >- # this means to ignore newlines until "baseurl"
+
+# Head title and info.
+title: "Junteng Liu"
+name: "Junteng Liu"
+description: >-
   Personal homepage of Junteng Liu — first-year Ph.D. candidate at the HKUST NLP Group, working on natural language processing and machine learning.
-twitter_username: junteng88716710
-github_username: Vicent0205
+
+googlescholar: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
+
 minimal_mistakes_skin: default
 search: true
-# text_align: right
-
-# Build settings
 markdown: kramdown
-# Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: Asia/Hong_Kong # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Reading Files
+output_dir: public
+# exclude:
+#   - ".sass-cache/"
+#   - ".jekyll-cache/"
+
+timezone: Asia/Hong_Kong
 repository: tramnhat492414-coder/LJT-Homepage
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+remote_theme: academicpages/academic-pages
 
 plugins:
   - jekyll-paginate
@@ -41,7 +54,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# mimic GitHub Pages with --safe
+# Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
@@ -53,34 +66,32 @@ whitelist:
 include:
   - _pages
 
-exclude:
-  - package.json
-  - package-lock.json
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
 keep_files:
   - images
-  - /assets/js/
 
-# jekyll-seo-tag overrides
-logo: /assets/img/academic_avatar.webp
-twitter:
-  username: junteng88716710
-social:
-  type: Person
-  name: Junteng Liu
-  links:
-    - https://twitter.com/junteng88716710
-    - https://github.com/Vicent0205
+search_provider: lunr
+lunr_search:
+  min_length: 1
+  fields: {title, excerpt, tags, content, tags, category}
+  expand_upper_case: true
+  index_files: true
+
+# Social sharing
+og_image: /assets/images/profile.jpg
 
 # Analytics
 analytics:
-  provider: "google-universal"
-  google:
-    tracking_id: "G-12345"
+  provider: false
+
+# Footer
+footer:
+  links:
+    - label: "Twitter/X"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/junteng88716710"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Vicent0205"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:jliugi@connect.ust.hk"
