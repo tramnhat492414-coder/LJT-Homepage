@@ -1,9 +1,8 @@
 # Authors
 
 Junteng Liu:
-  name
-    : "Junteng Liu"
-  avatar: "/assets/img/team/junteng-liu.jpg"
+  name: "Junteng Liu"
+  avatar: /assets/img/team/junteng-liu.jpg
   bio: "First-year Ph.D. candidate at the HKUST NLP Group."
   location: "Hong Kong"
   email: "jliugi@connect.ust.hk"
